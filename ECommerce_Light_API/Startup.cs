@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
+using ECommerce_Light_API.DependencyInjection;
 
 namespace ECommerce_Light_API
 {
@@ -41,6 +42,7 @@ namespace ECommerce_Light_API
                     },
                 });
             });
+            services.AddMediator(ServiceLifetime.Singleton, typeof(Startup));
             services.AddControllers();
         }
 

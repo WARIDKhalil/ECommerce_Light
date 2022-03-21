@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ECommerce_Light_Domain\ECommerce_Light_Domain.csproj" />
     <ProjectReference Include="..\ECommerce_Light_Infrastructure\ECommerce_Light_Infrastructure.csproj" />
   </ItemGroup>
