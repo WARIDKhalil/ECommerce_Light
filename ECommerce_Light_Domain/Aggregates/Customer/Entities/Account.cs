@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ECommerce_Light_Domain.Aggregates.Customer
+namespace ECommerce_Light_Domain.Aggregates.Customer.Entities
 {
-    internal class Account : IBaseEntity<string>
+    public class Account : IBaseEntity<string>
     {
         public string Id { get; set; }
         public string Login { get; set; }

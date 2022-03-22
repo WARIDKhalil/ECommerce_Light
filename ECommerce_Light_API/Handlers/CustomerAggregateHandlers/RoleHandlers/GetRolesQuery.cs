@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ECommerce_Light_API.Handlers.RoleHandlers
+namespace ECommerce_Light_API.Handlers.CustmoerAggregateHandlers.RoleHandlers
 {
     public class GetRolesQuery : IQuery<List<Role>>
     {

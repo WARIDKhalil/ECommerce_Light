@@ -16,5 +16,16 @@
     <ProjectReference Include="..\ECommerce_Light_Infrastructure\ECommerce_Light_Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Handlers\CartAggregateHandlers\CartHandlers\" />
+    <Folder Include="Handlers\CustomerAggregateHandlers\CustomerHandlers\" />
+    <Folder Include="Handlers\CustomerAggregateHandlers\AccountHandlers\" />
+    <Folder Include="Handlers\OrderAggregateHandlers\OrderHandlers\" />
+    <Folder Include="Handlers\ProductAggregateHandlers\CategoryHandlers\" />
+    <Folder Include="Handlers\ProductAggregateHandlers\ProductHandlers\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 
 </Project>

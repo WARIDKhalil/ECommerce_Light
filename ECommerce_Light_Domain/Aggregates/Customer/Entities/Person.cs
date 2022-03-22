@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ECommerce_Light_Domain.Aggregates.Customer
+namespace ECommerce_Light_Domain.Aggregates.Customer.Entities
 {
     public class Person : IBaseEntity<string>
     {

@@ -1,17 +1,18 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
 using ECommerce_Light_API.DependencyInjection;
+using ECommerce_Light_Infrastructure.DBSettings;
+using ECommerce_Light_Infrastructure.Abstraction;
+using ECommerce_Light_Infrastructure.DBConfiguration;
+using ECommerce_Light_Infrastructure.Repositories;
+using ECommerce_Light_Domain.Repositories;
+using ECommerce_Light_Domain.Aggregates.Customer.Entities;
+using ECommerce_Light_Infrastructure.Mappers;
 
 namespace ECommerce_Light_API
 {
@@ -27,22 +28,36 @@ namespace ECommerce_Light_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.MapAllPOCOs();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Zomato API",
+                    Title = "ECommerce Light API",
                     Version = "v1",
-                    Description = "Description for the API goes here.",
+                    Description = "Implementation of a light Ecommerce web api",
                     Contact = new OpenApiContact
                     {
-                        Name = "Ankush Jain",
-                        Email = string.Empty,
-                        Url = new Uri("https://coderjony.com/"),
+                        Name = "Khalil Warid",
+                        Email = "khalil.warid@gmail.com",
+                        Url = new Uri("https://github.com/WARIDKhalil/ECommerce_Light"),
                     },
                 });
             });
+
+            services.Configure<DBSettings>(options =>
+            {
+                options.ConnectionString = Configuration.GetSection("DatabaseSettings:CONNECTION_STRING").Value;
+                options.DatabaseName = Configuration.GetSection("DatabaseSettings:DATABASENAME").Value;
+            });
+
+            services.AddSingleton<IDBContext,MongoDBContext>();
+
+            services.AddSingleton<IRepository<Role,string>,RoleRepository>();
+
             services.AddMediator(ServiceLifetime.Singleton, typeof(Startup));
+
             services.AddControllers();
         }
 
@@ -59,7 +74,7 @@ namespace ECommerce_Light_API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Zomato API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ECommerce Light API V1");
                 c.RoutePrefix = string.Empty;
             });
 

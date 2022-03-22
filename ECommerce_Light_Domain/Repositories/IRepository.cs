@@ -1,7 +1,5 @@
 ﻿using ECommerce_Light_Domain.Shared;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ECommerce_Light_Domain.Repositories

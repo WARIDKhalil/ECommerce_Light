@@ -13,5 +13,7 @@ namespace ECommerce_Light_Domain.Aggregates.Cart.Entities
         public string AccountId { get; set; }
         public DateTime? Created { get; set; }
         public DateTime? Updated { get; set; }
+
+        public Cart() { }
     }
 }

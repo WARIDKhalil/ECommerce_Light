@@ -1,4 +1,5 @@
-﻿using ECommerce_Light_API.Handlers.RoleHandlers;
+﻿using ECommerce_Light_API.Handlers.CustmoerAggregateHandlers.RoleHandlers;
+using ECommerce_Light_API.Handlers.CustomerAggregateHandlers.RoleHandlers;
 using ECommerce_Light_Domain.Aggregates.Customer.Entities;
 using ECommerce_Light_Domain.Shared.Mediator;
 using Microsoft.AspNetCore.Mvc;
@@ -23,5 +24,24 @@ namespace ECommerce_Light_API.Controllers
         {
             return await _mediator.Send(new GetRolesQuery());
         }
+
+        [HttpPost]
+        public async Task<Role> InsertRole(InsertRoleCommand action)
+        {
+            return await _mediator.Send(action);
+        }
+
+        [HttpPut]
+        public async Task<Role> UpdateRole(UpdateRoleCommand action)
+        {
+            return await _mediator.Send(action);
+        }
+
+        [HttpDelete]
+        public async Task<bool> DeleteRole(DeleteRoleCommand action)
+        {
+            return await _mediator.Send(action);
+        }
+
     }
 }
