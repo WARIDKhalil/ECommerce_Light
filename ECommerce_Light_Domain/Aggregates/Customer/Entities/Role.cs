@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Customer.Entities
 {
+    /// <summary>
+    ///   Represents the roles in the system
+    /// </summary>
     public class Role : IBaseEntity<string>
     {
         public string Id { get; set; }

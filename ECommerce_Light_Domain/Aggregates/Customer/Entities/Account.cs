@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Customer.Entities
 {
+    /// <summary>
+    ///  Account of an user
+    /// </summary>
     public class Account : IBaseEntity<string>
     {
         public string Id { get; set; }

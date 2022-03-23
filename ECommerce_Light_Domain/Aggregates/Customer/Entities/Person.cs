@@ -7,6 +7,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Customer.Entities
 {
+    /// <summary>
+    ///  Base class for human-entities
+    /// </summary>
     public class Person : IBaseEntity<string>
     {
         public string Id { get; set; }

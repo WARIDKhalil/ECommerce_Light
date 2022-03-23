@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.ValueObjects
 {
+    /// <summary>
+    ///   Represents infos of an Item in a Cart
+    /// </summary>
     public class LineItem
     {
         public string ProductId { get; set; }

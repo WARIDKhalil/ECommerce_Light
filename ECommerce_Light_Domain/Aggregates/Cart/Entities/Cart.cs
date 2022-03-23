@@ -6,6 +6,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Cart.Entities
 {
+    /// <summary>
+    ///  Holds Candidate items to be saled
+    /// </summary>
     public class Cart : IBaseEntity<string>
     {
         public string Id { get; set; }

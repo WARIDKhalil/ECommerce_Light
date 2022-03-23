@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Enumerations
 {
+    /// <summary>
+    ///  Social status of a person
+    /// </summary>
     public enum Civility
     {
         Mr,
@@ -12,6 +15,9 @@ namespace ECommerce_Light_Domain.Enumerations
         Undefined
     }
 
+    /// <summary>
+    ///  Helpers
+    /// </summary>
     public static class CivilityHelper
     {
 

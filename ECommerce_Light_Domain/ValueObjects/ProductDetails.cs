@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.ValueObjects
 {
+    /// <summary>
+    ///  Represents the details of a product
+    /// </summary>
     public class ProductDetails
     {
         public string ProductName { get; set; }

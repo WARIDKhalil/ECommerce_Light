@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Enumerations
 {
+    /// <summary>
+    ///  The state of a specific order
+    /// </summary>
     public enum OrderState
     {
         New,
@@ -11,6 +14,10 @@ namespace ECommerce_Light_Domain.Enumerations
         Delivred,
         Closed
     }
+
+    /// <summary>
+    ///  Helpers
+    /// </summary>
     public static class OrderStateHelper
     {
 

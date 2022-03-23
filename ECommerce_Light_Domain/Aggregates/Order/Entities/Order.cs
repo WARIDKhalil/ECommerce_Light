@@ -7,6 +7,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Order.Entities
 {
+    /// <summary>
+    ///  Order done by a customer
+    /// </summary>
     public class Order : IBaseEntity<string>
     {
         public string Id { get; set; }

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.ValueObjects
 {
+    /// <summary>
+    ///     Represents The geo-graphical infos
+    /// </summary>
     public class Adress
     {
         public string Country { get; set; }

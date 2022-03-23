@@ -4,6 +4,11 @@ using System.Threading.Tasks;
 
 namespace ECommerce_Light_Domain.Repositories
 {
+    /// <summary>
+    ///  Shared contract of basic operations to be handled
+    /// </summary>
+    /// <typeparam name="T">Entity</typeparam>
+    /// <typeparam name="TId"> Id type</typeparam>
     public interface IRepository<T, TId> where T : IBaseEntity<TId>
     {
         public Task<IEnumerable<T>> GetAllAsync();

@@ -6,6 +6,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Product.Entities
 {
+    /// <summary>
+    ///  Products in the system
+    /// </summary>
     public class Product : IBaseEntity<string>
     {
         public string Id { get; set; }

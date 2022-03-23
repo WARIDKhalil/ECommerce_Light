@@ -4,7 +4,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Enumerations
 {
-
+    /// <summary>
+    ///  The state of a specific user
+    /// </summary>
     public enum UserState
     {
         New,
@@ -13,6 +15,10 @@ namespace ECommerce_Light_Domain.Enumerations
         Blocked,
         Banned,
     }
+
+    /// <summary>
+    ///  Helpers
+    /// </summary>
     public static class UserStateHelper
     {
 

@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ECommerce_Light_Domain.Aggregates.Product.Entities
 {
+    /// <summary>
+    ///  Categories of products in the system
+    /// </summary>
     public class Category : IBaseEntity<string>
     {
         public string Id { get; set; }
