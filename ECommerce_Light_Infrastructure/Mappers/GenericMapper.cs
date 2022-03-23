@@ -9,9 +9,9 @@ using System.Text;
 
 namespace ECommerce_Light_Infrastructure.Mappers
 {
-    public class GenericMapper
+    public static class GenericMapper
     {
-        public void MapClass<T,TId>() where T : IBaseEntity<TId>
+        public static void MapClass<T,TId>() where T : IBaseEntity<TId>
         {
             BsonClassMap.RegisterClassMap<T>(cm => {
                 cm.AutoMap();
@@ -22,7 +22,7 @@ namespace ECommerce_Light_Infrastructure.Mappers
             });
         }
 
-        public void MapSubClass<T, TId>() where T : IBaseEntity<TId>
+        public static void MapSubClass<T, TId>() where T : IBaseEntity<TId>
         {
             BsonClassMap.RegisterClassMap<T>(cm => {
                 cm.AutoMap();
@@ -30,7 +30,7 @@ namespace ECommerce_Light_Infrastructure.Mappers
             });
         }
 
-        public void MapRootClass<T, TId>() where T : IBaseEntity<TId>
+        public static void MapRootClass<T, TId>() where T : IBaseEntity<TId>
         {
             BsonClassMap.RegisterClassMap<T>(cm => {
                 cm.AutoMap();

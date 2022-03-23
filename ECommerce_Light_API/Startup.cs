@@ -13,6 +13,7 @@ using ECommerce_Light_Infrastructure.Repositories;
 using ECommerce_Light_Domain.Repositories;
 using ECommerce_Light_Domain.Aggregates.Customer.Entities;
 using ECommerce_Light_Infrastructure.Mappers;
+using ECommerce_Light_Infrastructure.Helpers;
 
 namespace ECommerce_Light_API
 {
@@ -28,7 +29,6 @@ namespace ECommerce_Light_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.MapAllPOCOs();
 
             services.AddSwaggerGen(c =>
             {
@@ -54,7 +54,9 @@ namespace ECommerce_Light_API
 
             services.AddSingleton<IDBContext,MongoDBContext>();
 
-            services.AddSingleton<IRepository<Role,string>,RoleRepository>();
+            services.MapAllPOCOs();
+
+            services.RepositoryInjector();
 
             services.AddMediator(ServiceLifetime.Singleton, typeof(Startup));
 
