@@ -8,6 +8,11 @@ namespace ECommerce_Light_Infrastructure.Mappers
 {
     public static class GlobalMapper
     {
+        /// <summary>
+        ///     Extension method to Map all POCOs on stratup
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection MapAllPOCOs( this IServiceCollection services)
         {
             GenericMapper.MapClass<Role,string>();

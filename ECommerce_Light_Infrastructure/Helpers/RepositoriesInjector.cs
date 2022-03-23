@@ -13,7 +13,11 @@ namespace ECommerce_Light_Infrastructure.Helpers
 {
     public static class RepositoriesInjector
     {
-
+        /// <summary>
+        ///     Extension method to Inject Repositories
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection RepositoryInjector(this IServiceCollection services)
         {
             services.AddSingleton<IRepository<Role, string>, RoleRepository>();

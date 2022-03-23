@@ -9,6 +9,9 @@ using System.Text;
 
 namespace ECommerce_Light_Infrastructure.Mappers
 {
+    /// <summary>
+    ///  Maps POCOs while de/serializing the documents
+    /// </summary>
     public static class GenericMapper
     {
         public static void MapClass<T,TId>() where T : IBaseEntity<TId>
